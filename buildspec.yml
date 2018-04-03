@@ -5,9 +5,15 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Go code...
+      - apt-get update -y
+      - apt-get install -y nodejs-legacy npm git 
+      - npm config set strict-ssl false
+      - npm install -g bower 
+      - bower install --allow-root 
       - echo my working directory....
       - pwd
       - echo Running command
+      - chmod +x /go/bin/dep
       - sudo dep ensure
       - go build hello.go 
   post_build:
