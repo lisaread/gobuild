@@ -5,6 +5,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Go code...
+      - echo my working directory....
+      - pwd
+      - echo Running command
+      - sudo dep ensure
       - go build hello.go 
   post_build:
     commands:
