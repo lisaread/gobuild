@@ -4,9 +4,7 @@ phases:
   build:
     commands:
       - apt-get update -y
-      - apt-get install -y nodejs-legacy npm git
-      - npm config set strict-ssl false
-      - npm install -g bower
+      - apt-get install -y npm git
       - echo Build started on `date`
       - echo Running dep ensure...
       - chmod +x /go/bin/dep
