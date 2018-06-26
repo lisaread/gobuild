@@ -9,7 +9,6 @@ phases:
       - echo Running dep ensure...
       - chmod +x /go/bin/dep
       - pwd
-      - dep ensure
       - echo Running bee pack...
       - go get -u github.com/astaxie/beego
       - go get -u github.com/beego/bee
